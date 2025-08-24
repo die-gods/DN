@@ -1,0 +1,66 @@
+@font-face {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    margin: 0;
+    background-color: #3c0d19; /* maroon */
+    color: #f5f5dc; /* cream */
+    font-family: 'Quicksand', sans-serif;
+    text-align: center;
+}
+
+header {
+    padding: 50px 20px;
+}
+
+h1 {
+    font-family: 'Amellya', cursive;
+    font-size: 3em;
+    margin-bottom: 10px;
+    animation: glow 2s infinite alternate;
+}
+
+p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+@keyframes glow {
+    from { text-shadow: 0 0 10px #ffe9d6; }
+    to { text-shadow: 0 0 25px #ffb6b6; }
+    }
+    
+.heart {
+    font-size: 3em;
+    animation: heartbeat 1.5s infinite;
+    margin-top: 20px;
+}
+ @keyframes heartbeat {
+ 0%, 100% { transform: scale(1); }
+ 50% { transform: scale(1.2); }
+}
+
+/* Tombol ke halaman selanjutnya */
+.next-btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 12px 25px;
+    background-color: #f5f5dc; /* cream */
+    color: #800000; /* maroon */
+    font-weight: bold;
+    border-radius: 25px;
+    text-decoration: none;
+    border-radius: 25px;
+    box-shadow: 0 0 10px #f5f5dc;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: 0.3s;
+    animation: glow 2s infinite alternate;
+}
+
+.next-btn:hover {
+    background-color: #f5f5dc; /* tan */
+    box-shadow: 0 0 15px #F4F482, 0 0 30px #FFFFA2;
+}

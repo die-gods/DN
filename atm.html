@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SPECIAL ACCESS</title>
+  <link rel="stylesheet" href="atm.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Cinzel:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <h1 class="title">Card Private Access</h1>
+
+    <div class="atm-section">
+      <div class="upload-area">
+        <p>Upload Foto Card Depan</p>
+        <input type="file" id="atmFrontInput" accept="image/*">
+        <div class="preview" id="frontPreview">No Picture</div>
+      </div>
+
+      <div class="upload-area">
+        <p>Upload Foto Card Belakang</p>
+        <input type="file" id="atmBackInput" accept="image/*">
+        <div class="preview" id="backPreview">No Picture</div>
+      </div>
+    </div>
+
+    <div class="form-section">
+      <label for="atmName">NAME SPECIAL</label>
+      <input type="text" id="atmName" placeholder="Masukkan nama">
+
+      <label for="atmCode">NO CARD</label>
+      <input type="text" id="atmCode" placeholder="Masukkan kode unik">
+
+      <label for="atmPassword">Password</label>
+      <input type="password" id="atmPassword" placeholder="Masukkan password">
+      
+      <button onclick="validateATM()">Pindai & Akses</button>
+    </div>
+
+    <div class="scanner-container" id="scannerContainer">
+      <div class="atm-card" id="atmCard">
+        <div class="face front" id="scanFront"></div>
+        <div class="face back" id="scanBack"></div>
+        <div class="scan-line" id="scanLine"></div>
+      </div>
+    </div>
+
+    <div class="status" id="statusMessage"></div>
+  </div>
+
+  <script src="atm.js"></script>
+  <a id="nextPage" href="3/poetry.html" style="display:none;">Next Page</a>
+</body>
+</html>

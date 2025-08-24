@@ -1,0 +1,153 @@
+body {
+  margin: 0;
+  font-family: 'Playfair Display', serif;
+  background-color: #3c0d19;
+  color: #e9dcd5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  text-align: center;
+  width: 95%;
+  max-width: 800px;
+  background: rgba(255,255,255,0.05);
+  padding: 40px;
+  border-radius: 25px;
+  box-shadow: 0 0 40px rgba(0,0,0,0.5);
+  backdrop-filter: blur(6px);
+}
+
+.title {
+  font-family: 'Cinzel', serif;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #f2cfc2;
+}
+
+.upload-area {
+  margin: 15px 0;
+}
+
+.upload-area p {
+  font-size: 1rem;
+  margin-bottom: 6px;
+  color: #d9b2aa;
+}
+
+input[type="file"],
+input[type="text"],
+input[type="password"] {
+  margin: 8px 0;
+  padding: 12px;
+  border-radius: 12px;
+  border: none;
+  width: 80%;
+  font-size: 1rem;
+  font-family: 'Playfair Display', serif;
+  background: #5a1b2a;
+  color: #e9dcd5;
+  outline: none;
+}
+
+input[type="password"] {
+  font-family: 'Cinzel', serif;
+  letter-spacing: 1.5px;
+}
+
+button {
+  margin-top: 20px;
+  padding: 12px 35px;
+  border: none;
+  border-radius: 15px;
+  font-size: 1rem;
+  background: linear-gradient(135deg, #842442, #4a0e1d);
+  color: #f3e9dd;
+  cursor: pointer;
+  transition: transform 0.3s, background 0.3s;
+  font-family: 'Cinzel', serif;
+}
+
+button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #9e3255, #5d1b2c);
+}
+
+.preview {
+  margin-top: 12px;
+  padding: 10px;
+  font-size: 0.9rem;
+  border: 1px dashed #c7a9a3;
+  border-radius: 12px;
+  min-height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #bca9a4;
+}
+
+.preview img {
+  max-width: 150px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+}
+
+/* SCANNER 3D */
+.scanner-container {
+  perspective: 1000px;
+  margin-top: 40px;
+  height: 280px;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.atm-card {
+  width: 300px;
+  height: 180px;
+  position: relative;
+  transform-style: preserve-3d;
+  transform: rotateY(0deg);
+  transition: transform 1s ease-in-out;
+}
+
+.face {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  backface-visibility: hidden;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 0 25px rgba(0,0,0,0.4);
+}
+
+.face.back {
+  transform: rotateY(180deg);
+}
+
+.scan-line {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, #ff5577, transparent);
+  box-shadow: 0 0 20px #ff5577;
+  animation: scanning 2s linear infinite;
+  opacity: 0;
+  border-radius: 2px;
+}
+
+@keyframes scanning {
+  0% { top: 0; }
+  100% { top: 100%; }
+}
+
+.status {
+  margin-top: 25px;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
